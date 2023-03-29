@@ -128,18 +128,21 @@ main .card {
     background-color: #ECF2FF;
     margin: 8px;
 }
-@media (width < 992px) { 
-    main .card {
+/* Ponsel */
+@media (width < 768px) { 
+    .responsive {
         width: 100%;
     }
 }
-@media (width >= 992px) { 
-    main .card {
+/* Table */
+@media (width >= 768px) { 
+    .responsive {
         width: 30%;
     }
 }
+/* Komputer */
 @media (width >= 1200px) { 
-    main .card {
+    .responsive {
         width: 23%;
     }
 }

@@ -17,7 +17,7 @@ elementRestaurant.innerHTML = '';
 const obj = restaurants.restaurants;
 obj.forEach(element => {
     elementRestaurant.innerHTML += `
-    <div class="card">
+    <div class="card responsive">
         <img src="${element.pictureId}" alt="${element.name}">
         <div class="card-body">
             <p style="display:flex;justify-content: space-between;">
