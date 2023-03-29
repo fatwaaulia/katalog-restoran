@@ -122,19 +122,24 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
-.card {
+main .card {
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: #ECF2FF;
     margin: 8px;
 }
-@media (min-width: 786px) { 
-    .card {
+@media (width < 992px) { 
+    main .card {
         width: 100%;
     }
 }
-@media (min-width: 992px) { 
-    .card {
+@media (width >= 992px) { 
+    main .card {
+        width: 30%;
+    }
+}
+@media (width >= 1200px) { 
+    main .card {
         width: 23%;
     }
 }
