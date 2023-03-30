@@ -4,8 +4,8 @@ import restaurants from '../DATA.json';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import $ from 'jquery/dist/jquery.min.js';
 
-$(document).ready(function() {
-    $(".drawer").click(function() {
+$(document).ready(() => {
+    $(".drawer").click(() => {
         $(".items").toggleClass("show");
         $("ul li").toggleClass("hide");
     });
