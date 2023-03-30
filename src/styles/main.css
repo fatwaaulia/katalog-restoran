@@ -128,12 +128,12 @@ nav ul li.drawer.hide i:before{
 
 /* Main */
 .container {
-    margin: 50px;
+    margin: 50px auto;
 }
 main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 main .card {
     border: 2px solid #ddd;
@@ -148,13 +148,16 @@ main .card {
     }
 }
 /* Tablet */
-@media only screen and (min-width: 992px) { 
+@media only screen and (min-width: 768px) { 
     .responsive {
         width: 30%;
     }
 }
 /* Komputer */
 @media screen and (width >= 1200px) { 
+    .container {
+        margin: 50px;
+    }
     .responsive {
         width: 23%;
     }
