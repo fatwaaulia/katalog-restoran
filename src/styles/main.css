@@ -128,33 +128,33 @@ nav ul li.drawer.hide i:before{
 
 /* Main */
 .container {
-    width: 95%;
-    margin: 50px auto;
+    margin: 50px;
 }
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 main .card {
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: #ECF2FF;
-    margin: 8px;
+    margin: 12px;
 }
 /* Ponsel */
-@media (width < 768px) { 
+@media only screen and (max-width: 768px) { 
     .responsive {
         width: 100%;
     }
 }
-/* Table */
-@media (width >= 768px) { 
+/* Tablet */
+@media only screen and (min-width: 992px) { 
     .responsive {
         width: 30%;
     }
 }
 /* Komputer */
-@media (width >= 1200px) { 
+@media screen and (width >= 1200px) { 
     .responsive {
         width: 23%;
     }
