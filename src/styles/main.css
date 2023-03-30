@@ -38,6 +38,7 @@ nav ul li.logo{
 nav ul li.items{
     position: relative;
     width: auto;
+    margin-right: 16px;
     margin-left: 16px;
     text-align: center;
     order: 3;
