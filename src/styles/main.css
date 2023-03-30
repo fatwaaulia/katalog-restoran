@@ -50,7 +50,7 @@ nav ul li.items:after{
     bottom: 5px;
     height: 2px;
     width: 100%;
-    background: #33ffff;
+    background: #BFACE2;
     opacity: 0;
     transition: screen 0.2s linear;
 }
@@ -65,7 +65,7 @@ nav ul li a{
     transition: .4s;
 }
 nav ul li:hover a{
-    color: cyan;
+    color: #BFACE2;
 }
 nav ul li i{
     font-size: 23px;
