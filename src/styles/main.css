@@ -133,7 +133,7 @@ nav ul li.drawer.hide i:before{
 main {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
+    justify-content: space-around;
 }
 main .card {
     border: 2px solid #ddd;
