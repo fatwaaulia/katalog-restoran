@@ -32,6 +32,10 @@ const restaurant = () => {
                     </p>
                     <h3>${element.name}</h3>
                     <p class="deskripsi">${element.description}</p>
+                    <a href="#" class="detail">
+                        Detail
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
             `;
