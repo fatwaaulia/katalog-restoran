@@ -133,31 +133,35 @@ nav ul li.drawer.hide i:before{
 
 /* Layout */
 .container {
-    margin: 50px;
+    margin: 25px 50px;
 }
 .row {
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 100%;
+}
+.col {
     display: grid;
-    column-gap: 16px;
-    row-gap: 16px;
+    gap: 20px;
 }
 /* Ponsel */
 @media only screen and (max-width: 768px) {
     .container {
         margin: 1rem;
     }
-    .row {
+    .col {
         grid-template-columns: repeat(1, 1.2fr);
     }
 }
 /* Tablet */
 @media only screen and (min-width: 768px) { 
-    .row {
+    .col {
         grid-template-columns: repeat(2, 1.2fr);
     }
 }
 /* Komputer */
 @media screen and (width >= 1200px) {
-    .row {
+    .col {
         grid-template-columns: repeat(4, 1.2fr);
     }
 }

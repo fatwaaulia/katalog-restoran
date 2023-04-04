@@ -10,7 +10,9 @@ const Home = {
             <div class="row">
                 <h1>Restaurant</h1>
             </div>
-            <div class="row" id="restaurant">
+            <div class="row">
+                <div class="col" id="restaurant">
+                </div>
             </div>
         </div>
         `;
