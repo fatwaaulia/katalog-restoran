@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     
     <title>Restaurant Apps Starter Project</title>
 </head>
 <body>
     <a href="#elementRestaurant" class="skip-link">Menuju ke konten</a>
-    <nav>
+    <nav id="navigationDrawer">
         <ul>
             <li class="logo">Halal Restaurant</li>
-            <li class="drawer"><a href="#"><i class="fas fa-bars"></i></a></li>
+            <li class="drawer">
+                <button id="hamburgerButton">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </li>
             <li class="items"><a href="">Home</a></li>
-            <li class="items"><a href="#">Favorite</a></li>
+            <li class="items"><a href="#/detail/123">Favorite</a></li>
             <li class="items"><a href="https://fatwaaulia.github.io/" target="_blank">About Us</a></li>
         </ul>
     </nav>
@@ -22,7 +27,7 @@
     <header class="jumbotron" alt="hero-image_2">
     </header>
 
-    <main class="container" id="elementRestaurant">
+    <main id="mainContent">
         <!--  -->
     </main>
 
