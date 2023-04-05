@@ -139,7 +139,11 @@ nav ul li.drawer.hide i:before{
     width: 100%;
     max-width: 100%;
 }
-.col, .col-lg-4 {
+.col{
+    display: grid;
+    gap: 20px;
+}
+.col-lg-4 {
     display: grid;
     gap: 40px;
 }
@@ -169,14 +173,14 @@ nav ul li.drawer.hide i:before{
 }
 
 .card {
-    border: 2px solid #ddd;
+    border: 2px solid #ECF2FF;
     border-radius: 8px;
     background-color: #ECF2FF;
 }
 .card img {
     width:100%;
     height:150px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 6px 6px 0 0;
     object-fit: cover;
     background-position: center;
 }
@@ -190,6 +194,7 @@ nav ul li.drawer.hide i:before{
     overflow: hidden;
 }
 .card-body .detail {
+    color: #3E54AC;
     padding: 0px;
     font-weight: 600;
     transition: .5s;
