@@ -1,13 +1,51 @@
+import UrlParser from '../../routes/url-parser';
+import restaurantDB from '../../data/restaurant-db';
+import { RestaurantDetailTemplate } from '../templates/template-creator';
+
 const Detail = {
     async render() {
       return `
-        <h2>Detail Page</h2>
+        <header class="img-style" style="background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url('images/heros/hero-image_2.jpg');height:50vh" alt="hero-image_2">
+            <div class="container">
+                <div class="row center-xy">
+                    <h1 style="padding-top:110px;color:white">Detail Restaurant</h1>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div id="restaurant">
+            </div>
+        </div>
       `;
     },
    
     async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
+        const url = UrlParser.parseActiveUrlWithoutCombiner();
+        const data = await restaurantDB.detailRestaurant(url.id);
+        const restaurantContainer = document.querySelector('#restaurant');
+        const foodMenu = [];
+        data.restaurant.menus.foods.forEach((food, key) => {
+            foodMenu.push(`<span>${key+1}. ${food.name}<span><br>`)
+        })
+        const drinkMenu = [];
+        data.restaurant.menus.drinks.forEach((drink, key) => {
+            drinkMenu.push(`<span>${key+1}. ${drink.name}<span><br>`)
+        })
+        const customerReviews = [];
+        data.restaurant.customerReviews.forEach((customerReview) => {
+            customerReviews.push(`  
+                                <div">
+                                    <p>
+                                        <span><b>${customerReview.name}</b><span> <br>
+                                        <span>${customerReview.date}<span> <br>
+                                        <span>${customerReview.review}<span> 
+                                    </p>
+                                <div>
+                                `)
+        })
+        // console.log(customerReviews.join(''));
+        restaurantContainer.innerHTML = RestaurantDetailTemplate(data.restaurant, foodMenu.join(''), drinkMenu.join(''), customerReviews.join(''));
     },
-  };
+};
    
   export default Detail;

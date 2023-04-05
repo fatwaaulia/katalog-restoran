@@ -7,7 +7,7 @@ class RestaurantDB {
     return responseJson.restaurants;
   }
  
-  static async detailMovie(id) {
+  static async detailRestaurant(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     return response.json();
   }

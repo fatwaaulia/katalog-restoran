@@ -9,6 +9,18 @@ a {
     padding:22px;
     text-decoration: none;
 }
+img {
+    border-radius: 8px;
+}
+.img-style {
+    background-position: center;
+	background-size:cover;
+}
+.center-xy {
+    display: flex;
+    align-items: center;
+    justify-content: center 
+}
 
 /* Navbar */
 nav{
@@ -113,41 +125,23 @@ nav ul li.drawer.hide i:before{
     top: 0;
 }
 
-/* Jumbotron */
-.jumbotron {
-    height: 100vh;
-    background-image: url('../public/images/heros/hero-image_2.jpg');
-    background-position: center;
-	background-size:cover;
-}
-@media screen and (width >= 1200px) {
-    .jumbotron {
-        min-width: 1000px;
-    }
-}
-@media screen and (width < 1200px) {
-    .jumbotron {
-        width: 100%;
-    }
-}
-
 /* Layout */
 .container {
-    margin: 25px 50px;
+    margin:48px 64px;
 }
 .row {
     margin: 2rem 0;
     width: 100%;
     max-width: 100%;
 }
-.col {
+.col, .col-lg-4 {
     display: grid;
     gap: 20px;
 }
 /* Ponsel */
 @media only screen and (max-width: 768px) {
     .container {
-        margin: 1rem;
+        margin: 0 1rem;
     }
     .col {
         grid-template-columns: repeat(1, 1.2fr);
@@ -163,6 +157,9 @@ nav ul li.drawer.hide i:before{
 @media screen and (width >= 1200px) {
     .col {
         grid-template-columns: repeat(4, 1.2fr);
+    }
+    .col-lg-4 {
+        grid-template-columns: repeat(3, 1.2fr);
     }
 }
 

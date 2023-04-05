@@ -4,7 +4,7 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const Home = {
     async render() {
         return `
-        <header class="jumbotron" alt="hero-image_2">
+        <header class="img-style" style="background-image: url('images/heros/hero-image_2.jpg');height:100vh;" alt="hero-image_2">
         </header>
         <div class="container">
             <div class="row">
@@ -19,11 +19,11 @@ const Home = {
     },
    
     async afterRender() {
-        const restaurant = await restaurantDB.allRestaurant();
+        const allRestaurant = await restaurantDB.allRestaurant();
         // console.log(restaurant);
         const restaurantContainer = document.querySelector('#restaurant');
-        restaurant.forEach((element) => {
-            restaurantContainer.innerHTML += createRestaurantItemTemplate(element);
+        allRestaurant.forEach((restaurant) => {
+            restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
         });
     },
   };
