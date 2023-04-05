@@ -22,7 +22,7 @@ const RestaurantDetailTemplate = (restaurant, foodMenu, drinkMenu, customerRevie
 `
 <div class="row">
     <div class="col-lg-4">
-        <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" style="width:100%">
+        <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" style="width:100%;margin-top:8px">
         <div>
             <h1 style="margin-top:0">${restaurant.name}</h1>
             <p>${restaurant.address} <b>(${restaurant.city})</b></p>
