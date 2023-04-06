@@ -1,5 +1,5 @@
 import restaurantDB from '../../data/restaurant-db';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import { restaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
     async render() {
@@ -23,7 +23,7 @@ const Home = {
         // console.log(restaurant);
         const restaurantContainer = document.querySelector('#restaurant');
         allRestaurant.forEach((restaurant) => {
-            restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+            restaurantContainer.innerHTML += restaurantItemTemplate(restaurant);
         });
     },
   };

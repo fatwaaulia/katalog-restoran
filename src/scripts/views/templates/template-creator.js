@@ -1,6 +1,6 @@
 import CONFIG from '../../globals/config';
 
-const createRestaurantItemTemplate = (restaurant) => `
+const restaurantItemTemplate = (restaurant) => `
 <div class="card">
     <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
     <div class="card-body">
@@ -59,5 +59,26 @@ const RestaurantDetailTemplate = (restaurant, foodMenu, drinkMenu, customerRevie
     </div>
 </div>
 `;
+
+const favoriteItemTemplate = (restaurant) => `
+<div class="card">
+    <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
+    <div class="card-body">
+        <p style="display:flex;justify-content:space-between;">
+            <b>Rating ${restaurant.rating}</b>
+            <b>${restaurant.city}</b>
+        </p>
+        <h3>
+            ${restaurant.name}
+            <i class="fa-solid fa-heart" style="float:right;color:red"></i>
+        </h3>
+        <p class="deskripsi">${restaurant.description}</p>
+        <a href="#/detail/${restaurant.id}" class="detail">
+            Detail
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+`;
  
-export { createRestaurantItemTemplate, RestaurantDetailTemplate };
+export { restaurantItemTemplate, RestaurantDetailTemplate, favoriteItemTemplate };
