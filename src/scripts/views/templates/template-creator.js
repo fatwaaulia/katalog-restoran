@@ -24,7 +24,10 @@ const RestaurantDetailTemplate = (restaurant, foodMenu, drinkMenu, customerRevie
     <div class="col-lg-4">
         <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" style="width:100%;margin-top:8px">
         <div>
-            <h1 style="margin-top:0">${restaurant.name}</h1>
+            <h1 style="margin-top:0">
+                ${restaurant.name}
+                <i class="fa-regular fa-heart fa-sm" style="float:right;margin-top:16px"></i>
+            </h1>
             <p>${restaurant.address} <b>(${restaurant.city})</b></p>
             <p>${restaurant.description}</p>
         </div>
