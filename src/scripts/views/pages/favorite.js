@@ -1,4 +1,4 @@
-import restaurantDB from '../../data/restaurant-db';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import { favoriteItemTemplate } from '../templates/template-creator';
 
 const Favorite = {
@@ -24,7 +24,7 @@ const Favorite = {
     },
    
     async afterRender() {
-        const allRestaurant = await restaurantDB.allRestaurant();
+        const allRestaurant = await FavoriteRestaurantIdb.getAllRestaurant();
         // console.log(restaurant);
         const restaurantContainer = document.querySelector('#restaurant');
         allRestaurant.forEach((restaurant) => {

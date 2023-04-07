@@ -5,7 +5,10 @@ const restaurantItemTemplate = (restaurant) => `
     <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
     <div class="card-body">
         <p style="display:flex;justify-content:space-between;">
-            <b>Rating ${restaurant.rating}</b>
+            <b style="color:#F99417">
+                <i class="fa-solid fa-star"></i>
+                ${restaurant.rating}
+            </b>
             <b>${restaurant.city}</b>
         </p>
         <h3>${restaurant.name}</h3>
@@ -26,7 +29,6 @@ const RestaurantDetailTemplate = (restaurant, foodMenu, drinkMenu, customerRevie
         <div>
             <h1 style="margin-top:0">
                 ${restaurant.name}
-                <i class="fa-regular fa-heart fa-sm" style="float:right;margin-top:16px"></i>
             </h1>
             <p>${restaurant.address} <b>(${restaurant.city})</b></p>
             <p>${restaurant.description}</p>
@@ -65,7 +67,10 @@ const favoriteItemTemplate = (restaurant) => `
     <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
     <div class="card-body">
         <p style="display:flex;justify-content:space-between;">
-            <b>Rating ${restaurant.rating}</b>
+            <b style="color:#F99417">
+                <i class="fa-solid fa-star"></i>
+                ${restaurant.rating}
+            </b>
             <b>${restaurant.city}</b>
         </p>
         <h3>
@@ -80,5 +85,23 @@ const favoriteItemTemplate = (restaurant) => `
     </div>
 </div>
 `;
+
+const likeButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" style="color:red;background-color:white" class="like">
+    <i class="fa-regular fa-heart fa-sm" aria-hidden="true"></i>
+  </button>
+`;
  
-export { restaurantItemTemplate, RestaurantDetailTemplate, favoriteItemTemplate };
+const likedButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likeButton" style="color:white;background-color:red" class="like">
+    <i class="fa-solid fa-heart fa-sm" aria-hidden="true"></i>
+  </button>
+`;
+ 
+export {
+        restaurantItemTemplate,
+        RestaurantDetailTemplate,
+        favoriteItemTemplate,
+        likeButtonTemplate,
+        likedButtonTemplate
+        };

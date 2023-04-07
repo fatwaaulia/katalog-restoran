@@ -1,6 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import restaurantDB from '../../data/restaurant-db';
 import { RestaurantDetailTemplate } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
     async render() {
@@ -16,6 +17,7 @@ const Detail = {
             <div id="restaurant">
             </div>
         </div>
+        <div id="likeButtonContainer"></div>
       `;
     },
    
@@ -45,6 +47,18 @@ const Detail = {
         })
         // console.log(customerReviews.join(''));
         restaurantContainer.innerHTML = RestaurantDetailTemplate(data.restaurant, foodMenu.join(''), drinkMenu.join(''), customerReviews.join(''));
+
+        LikeButtonInitiator.init({
+            likeButtonContainer: document.querySelector('#likeButtonContainer'),
+                restaurant: {
+                id: data.restaurant.id,
+                name: data.restaurant.name,
+                description: data.restaurant.description,
+                pictureId: data.restaurant.pictureId,
+                city: data.restaurant.city,
+                rating: data.restaurant.rating,
+            },
+        });
     },
 };
    
