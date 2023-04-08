@@ -14,7 +14,7 @@ const Detail = {
                 </div>
             </div>
         </header>
-        <div class="container">
+        <div class="container" id="skipToContent">
             <div id="restaurant">
             </div>
         </div>

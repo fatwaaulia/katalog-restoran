@@ -15,7 +15,7 @@ const Favorite = {
                 </div>
             </div>
         </header>
-        <div class="container">
+        <div class="container" id="skipToContent">
             <div class="row">
                 <div class="col" id="restaurant">
                 </div>
