@@ -12,6 +12,11 @@ a {
 img {
     border-radius: 8px;
 }
+
+#elementRestaurant {
+    scroll-margin-top: 100px;
+}
+
 .img-style {
     background-position: center;
 	background-size:cover;

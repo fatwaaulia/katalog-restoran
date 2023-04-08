@@ -7,7 +7,7 @@ const Home = {
     return `
         <header class="img-style" style="background-image: url('images/heros/hero-image_2.jpg');height:100vh;" alt="hero-image_2">
         </header>
-        <div class="container">
+        <div class="container" id="elementRestaurant">
             <div class="row">
                 <h1>Restaurant</h1>
             </div>
