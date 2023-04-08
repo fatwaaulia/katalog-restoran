@@ -1,28 +1,31 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-use-before-define */
 const restaurant = () => {
-    const urlAPI = 'https://restaurant-api.dicoding.dev';
-   
-    const getRestaurant = async() => {
-        try {
-            const response = await fetch(`${urlAPI}/list`);
-            const responseJson = await response.json();
-            if (responseJson.message == 'success') {
-              renderAllgetRestaurant(responseJson.restaurants);
-            //   console.log(responseJson.restaurants);
-            } else {
-                console.log(responseJson.message);
-            }
-        } catch (error) {
-            // console.log(error);
-            alert('Ups something error');
-        }
-    };
-  
-    const renderAllgetRestaurant = (data) => {
-        const elementRestaurant = document.getElementById('elementRestaurant');
-        elementRestaurant.innerHTML = '';
+  const urlAPI = 'https://restaurant-api.dicoding.dev';
 
-        data.forEach(element => {
-            elementRestaurant.innerHTML += `
+  const getRestaurant = async () => {
+    try {
+      const response = await fetch(`${urlAPI}/list`);
+      const responseJson = await response.json();
+      if (responseJson.message == 'success') {
+        renderAllgetRestaurant(responseJson.restaurants);
+        //   console.log(responseJson.restaurants);
+      } else {
+        console.log(responseJson.message);
+      }
+    } catch (error) {
+      // console.log(error);
+      alert('Ups something error');
+    }
+  };
+
+  const renderAllgetRestaurant = (data) => {
+    const elementRestaurant = document.getElementById('elementRestaurant');
+    elementRestaurant.innerHTML = '';
+
+    data.forEach((element) => {
+      elementRestaurant.innerHTML += `
             <div class="card responsive">
                 <img src="https://restaurant-api.dicoding.dev/images/medium/${element.pictureId}" alt="${element.name}">
                 <div class="card-body">
@@ -39,9 +42,9 @@ const restaurant = () => {
                 </div>
             </div>
             `;
-        });
-    };
-    getRestaurant();
-}
-  
-  export default restaurant;
+    });
+  };
+  getRestaurant();
+};
+
+export default restaurant;

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import CONFIG from '../../globals/config';
 
 const restaurantItemTemplate = (restaurant) => `
@@ -21,8 +22,7 @@ const restaurantItemTemplate = (restaurant) => `
 </div>
 `;
 
-const RestaurantDetailTemplate = (restaurant, foodMenu, drinkMenu, customerReviews) =>
-`
+const RestaurantDetailTemplate = (restaurant, foodMenu, drinkMenu, customerReviews) => `
 <div class="row">
     <div class="col-lg-4">
         <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" style="width:100%;margin-top:8px">
@@ -91,17 +91,17 @@ const likeButtonTemplate = () => `
     <i class="fa-regular fa-heart fa-sm" aria-hidden="true"></i>
   </button>
 `;
- 
+
 const likedButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" style="color:white;background-color:red" class="like">
     <i class="fa-solid fa-heart fa-sm" aria-hidden="true"></i>
   </button>
 `;
- 
+
 export {
-        restaurantItemTemplate,
-        RestaurantDetailTemplate,
-        favoriteItemTemplate,
-        likeButtonTemplate,
-        likedButtonTemplate
-        };
+  restaurantItemTemplate,
+  RestaurantDetailTemplate,
+  favoriteItemTemplate,
+  likeButtonTemplate,
+  likedButtonTemplate,
+};

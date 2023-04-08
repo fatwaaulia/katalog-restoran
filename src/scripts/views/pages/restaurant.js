@@ -1,9 +1,10 @@
+/* eslint-disable linebreak-style */
 import restaurantDB from '../../data/restaurant-db';
 import { restaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
-    async render() {
-        return `
+  async render() {
+    return `
         <header class="img-style" style="background-image: url('images/heros/hero-image_2.jpg');height:100vh;" alt="hero-image_2">
         </header>
         <div class="container">
@@ -16,16 +17,16 @@ const Home = {
             </div>
         </div>
         `;
-    },
-   
-    async afterRender() {
-        const allRestaurant = await restaurantDB.allRestaurant();
-        // console.log(restaurant);
-        const restaurantContainer = document.querySelector('#restaurant');
-        allRestaurant.forEach((restaurant) => {
-            restaurantContainer.innerHTML += restaurantItemTemplate(restaurant);
-        });
-    },
-  };
-   
-  export default Home;
+  },
+
+  async afterRender() {
+    const allRestaurant = await restaurantDB.allRestaurant();
+    // console.log(restaurant);
+    const restaurantContainer = document.querySelector('#restaurant');
+    allRestaurant.forEach((restaurant) => {
+      restaurantContainer.innerHTML += restaurantItemTemplate(restaurant);
+    });
+  },
+};
+
+export default Home;
