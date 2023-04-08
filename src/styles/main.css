@@ -194,8 +194,8 @@ nav ul li.drawer.hide i:before{
     overflow: hidden;
 }
 .card-body .detail {
+    padding:22px 0px;
     color: #3E54AC;
-    padding: 0px;
     font-weight: 600;
     transition: .5s;
 }
