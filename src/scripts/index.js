@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/first */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/extensions */
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
@@ -23,3 +26,9 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
+
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
+const START = 10;
+const NUMBER_OF_IMAGES = 100;
