@@ -5,8 +5,11 @@ import { restaurantItemTemplate } from '../templates/template-creator';
 const Home = {
   async render() {
     return `
-        <header class="img-style" style="background-image: url('images/heros/hero-image_2.jpg');height:100vh;" alt="hero-image_2">
-        </header>
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/heros/hero-image_2.jpg">
+          <header class="img-style" style="background-image: url('images/heros/hero-image_2.jpg');height:100vh;" alt="hero-image_2">
+          </header>
+        </picture>
         <div class="container" id="skipToContent">
             <div class="row">
                 <h1>Restaurant</h1>
