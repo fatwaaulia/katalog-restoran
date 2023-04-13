@@ -37,13 +37,14 @@
     "sharp": "^0.32.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.77.0",
+    "webpack-bundle-analyzer": "^4.8.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.3.0",
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "idb": "^7.1.1",
     "jquery": "^3.6.4",
     "lazysizes": "^5.3.2",
