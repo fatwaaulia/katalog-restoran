@@ -29,8 +29,12 @@ const Favorite = {
 
   async afterRender() {
     const allRestaurant = await FavoriteRestaurantIdb.getAllRestaurant();
-    // console.log(restaurant);
     const restaurantContainer = document.querySelector('#restaurant');
+    if (allRestaurant.length > 0) {
+      restaurantContainer.innerHTML = '';
+    } else {
+      restaurantContainer.innerHTML = 'Restaurant tidak ditemukan!';
+    }
     allRestaurant.forEach((restaurant) => {
       restaurantContainer.innerHTML += favoriteItemTemplate(restaurant);
     });
