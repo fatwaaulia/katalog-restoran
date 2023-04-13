@@ -1,7 +1,8 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 const assert = require('assert');
 
-Feature('Liking Restaurant');
+Feature('Unliking Restaurant');
 
 Before(({ I }) => {
   I.amOnPage('/#/favorite');
@@ -11,8 +12,7 @@ Scenario('showing empty favorite restaurant', ({ I }) => {
   I.dontSeeElement('.card');
 });
 
-Scenario('liking one restaurant', async ({ I }) => {
-  I.dontSeeElement('.card');
+Scenario('unliking one restaurant', async ({ I }) => {
   I.amOnPage('/');
   I.waitForElement('.card');
   I.seeElement('.card-body a');
@@ -26,8 +26,20 @@ Scenario('liking one restaurant', async ({ I }) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/favorite');
+  I.waitForElement('.card');
   I.seeElement('.card');
-  const likedRestaurantTitle = await I.grabTextFrom('.card-body a');
+  const unlikedRestaurantsTitles = await I.grabTextFrom('.card-body a');
 
-  assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+  assert.strictEqual(firstRestaurantTitle, unlikedRestaurantsTitles);
+
+  I.seeElement('.card-body a');
+  await I.grabTextFrom(firstRestaurant);
+  I.click(firstRestaurant);
+
+  I.waitForElement('#likeButton');
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favorite');
+  I.dontSeeElement('.card');
 });
