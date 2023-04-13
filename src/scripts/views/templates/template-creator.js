@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 
 const restaurantItemTemplate = (restaurant) => `
 <div class="card">
-    <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" class="lazyload">
+    <img data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" class="lazyload">
     <div class="card-body">
         <p style="display:flex;justify-content:space-between;">
             <b style="color:#F99417">
