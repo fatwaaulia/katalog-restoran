@@ -18,8 +18,11 @@ img {
 }
 
 .img-style {
-    background-position: center;
-	background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    object-fit: cover;
 }
 .center-xy {
     display: flex;
@@ -116,7 +119,7 @@ nav ul li.drawer.hide i:before{
     nav ul li.drawer button{
       border: 2px solid #BFACE2;
       border-radius: 6px;
-      padding: 8px 12px;
+      padding: 10px 12px;
     }
     nav ul li.items:hover:after{
       opacity: 0;

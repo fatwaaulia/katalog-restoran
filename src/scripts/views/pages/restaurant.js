@@ -6,9 +6,8 @@ const Home = {
   async render() {
     return `
         <picture>
-          <source media="(max-width: 600px)" srcset="images/heros/hero-image_2.jpg">
-          <header class="img-style" style="background-image: url('images/heros/hero-image_2.jpg');height:100vh;" alt="hero-image_2">
-          </header>
+          <source media="(max-width: 600px)" srcset="images/heros/hero-image_2-small.jpg" type="image/jpeg">
+          <img src="images/heros/hero-image_2-large.jpg" class="img-style" style="height:100vh;width:100%;border-radius:0" alt="hero-image_2">
         </picture>
         <div class="container" id="skipToContent">
             <div class="row">

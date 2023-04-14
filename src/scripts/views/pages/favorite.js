@@ -5,26 +5,22 @@ import { favoriteItemTemplate } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
-        <picture>
-          <source media="(max-width: 600px)" srcset="images/heros/hero-image_2.jpg">
-          <header class="img-style" style="background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url('images/heros/hero-image_2.jpg');height:50vh" alt="hero-image_2">
-              <div class="container">
-                  <div class="row center-xy">
-                      <h1 style="padding-top:110px;color:white">
-                          <span>Fav</span><i class="fa-solid fa-heart" style="color:red;font-size:24px"></i><span>rite</span>
-                          Restaurant
-                      </h1>
-                  </div>
-              </div>
-          </header>
-        </picture>
-        <div class="container" id="skipToContent">
-            <div class="row">
-                <div class="col" id="restaurant">
-                </div>
-            </div>
+      <picture>
+        <source media="(max-width: 600px)" srcset="images/heros/hero-image_2-small.jpg" type="image/jpeg">
+        <header>
+          <img src="images/heros/hero-image_2-large.jpg" class="img-style" style="height:50vh;width:100%;border-radius:0;" alt="hero-image_2">
+          <div class="row center-xy">
+            <h1 style="color:red;-webkit-text-stroke: 1px white;margin-top:-350px">Favorite Restaurant</h1>
         </div>
-        `;
+        </header>
+      </picture>
+      <div class="container" id="skipToContent">
+          <div class="row">
+              <div class="col" id="restaurant">
+              </div>
+          </div>
+      </div>
+    `;
   },
 
   async afterRender() {

@@ -36,13 +36,18 @@ describe('Liking A Restaurant', () => {
     expect(document.querySelector('[aria-label="unlike this restaurant"]')).toBeFalsy();
   });
 
-  xit('should not add a restaurant when it has no id', async () => {
+  it('should be able to like the restaurant', async () => {
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      restaurant: {},
+      restaurant: {
+        id: 1,
+      },
     });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-    expect(await FavoriteRestaurantIdb.getRestaurant()).toEqual([]);
+    const restaurant = await FavoriteRestaurantIdb.getRestaurant(1);
+
+    expect(restaurant).toEqual({ id: 1 });
+    FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 });
